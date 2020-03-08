@@ -10,23 +10,24 @@ import SwiftUI
 
 struct ImagePicker: UIViewControllerRepresentable {
 
+    
     @Environment(\.presentationMode)
     var presentationMode
-
+    
+    /// 端末の画像
     @Binding var image: Image?
     
-    @Binding var sourceType: UIImagePickerController.SourceType
+    /// PickerType (PhotoLibrary or Camera or  savedPhotosAlbum )
+    var sourceType: UIImagePickerController.SourceType?
 
     class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
         @Binding var presentationMode: PresentationMode
         @Binding var image: Image?
-        @Binding var sourceType: UIImagePickerController.SourceType
 
-        init(presentationMode: Binding<PresentationMode>, image: Binding<Image?>,   sourceType: Binding<UIImagePickerController.SourceType>) {
+        init(presentationMode: Binding<PresentationMode>, image: Binding<Image?>) {
             _presentationMode = presentationMode
             _image = image
-            _sourceType = sourceType
         }
 
         func imagePickerController(_ picker: UIImagePickerController,
@@ -44,12 +45,16 @@ struct ImagePicker: UIViewControllerRepresentable {
     }
 
     func makeCoordinator() -> Coordinator {
-        return Coordinator(presentationMode: presentationMode, image: $image, sourceType: $sourceType)
+        return Coordinator(presentationMode: presentationMode, image: $image)
     }
 
     func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
         let picker = UIImagePickerController()
         picker.delegate = context.coordinator
+        guard let sourceType = self.sourceType else {
+            return picker
+        }
+        picker.sourceType = sourceType
         return picker
     }
 
