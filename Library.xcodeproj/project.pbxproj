@@ -15,6 +15,7 @@
 		DCED0F142414892D00DC84DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCED0F122414892D00DC84DF /* LaunchScreen.storyboard */; };
 		DCED0F1F2414892D00DC84DF /* LibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCED0F1E2414892D00DC84DF /* LibraryTests.swift */; };
 		DCED0F2A2414892D00DC84DF /* LibraryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCED0F292414892D00DC84DF /* LibraryUITests.swift */; };
+		DCED0F3C241495DD00DC84DF /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCED0F3B241495DD00DC84DF /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		DCED0F252414892D00DC84DF /* LibraryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibraryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCED0F292414892D00DC84DF /* LibraryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryUITests.swift; sourceTree = "<group>"; };
 		DCED0F2B2414892D00DC84DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCED0F3B241495DD00DC84DF /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				DCED0F072414892200DC84DF /* AppDelegate.swift */,
 				DCED0F092414892200DC84DF /* SceneDelegate.swift */,
 				DCED0F0B2414892200DC84DF /* ContentView.swift */,
+				DCED0F3B241495DD00DC84DF /* ImagePicker.swift */,
 				DCED0F0D2414892D00DC84DF /* Assets.xcassets */,
 				DCED0F122414892D00DC84DF /* LaunchScreen.storyboard */,
 				DCED0F152414892D00DC84DF /* Info.plist */,
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCED0F082414892200DC84DF /* AppDelegate.swift in Sources */,
+				DCED0F3C241495DD00DC84DF /* ImagePicker.swift in Sources */,
 				DCED0F0A2414892200DC84DF /* SceneDelegate.swift in Sources */,
 				DCED0F0C2414892200DC84DF /* ContentView.swift in Sources */,
 			);
